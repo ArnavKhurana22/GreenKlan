@@ -1,3 +1,5 @@
+@import url('./transitions.css');
+
 body, .home-page {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@ body, .home-page {
 
 /* Base Styles */
 :root {
-  --primary-green: #2e7d32;
+  --primary-green: #133235;
   --secondary-green: #81C784;
   --dark-text: #1A1A1A;
   --light-text: #FFFFFF;
@@ -35,7 +37,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #2e7d32;
+  background-color: #001418;
   transition: transform 0.7s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -61,7 +63,7 @@ body {
 
 /* Logo */
 .logo-img {
-  height: 100px; /* Increased size */
+  height: 110px; /* Increased size */
   width: auto;
 }
 
@@ -150,15 +152,7 @@ body {
 }
 
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-}
+
 
 /* Footer Styles */
 .footer {
@@ -166,14 +160,48 @@ body {
   color: var(--light-text);
   padding: 2rem 5%;
   margin-top: auto;
-  height: 220px;
-  
+  height: auto;
+}
+
+/* Ensure content stacks properly on small screens */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .quick-links,
+  .footer-section {
+    margin-left: 0;
+  }
+  .social-icons {
+    justify-content: center;
+  }
 }
 
 .footer-bottom {
   text-align: center; /* Center aligns the text */
   width: 100%;
   margin-top: 10px; /* Adjust spacing */
+}
+
+a {
+  color: var(--light-text);
+  text-decoration: none;
 }
 
 .footer-content {
@@ -188,27 +216,29 @@ body {
   margin-bottom: 1rem;
 }
 
-.quick-links{
-  margin-left:120px;
+.quick-links {
+  margin-left: 120px;
 }
 
-.footer-section{
+.footer-section {
   margin-left: 90px;
 }
+
 .social-icons {
   display: flex;
+  margin-right: 200px;
   gap: 1rem;
   font-size: 1.5rem;
+  justify-content: center;
 }
 
-
-
 /* Responsive for Small Screens */
+/* Default state: Hide menu on small screens */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     right: 0;
     background: var(--primary-green);
@@ -218,40 +248,39 @@ body {
     text-align: center;
   }
 
-
+  /* Show nav-links when menuOpen is active */
   .nav-links.active {
     display: flex;
   }
 
-}
-
-@media (max-width: 768px) {
+  /* Mobile menu button */
   .mobile-menu-btn {
     display: block;
-  }
-
-  .nav-links {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
     position: absolute;
-    top: 60px;
-    right: 0;
-    background: #2a7b2a;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a, .contact-link {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
+    right: 20px;
+    top: 15px;
   }
 }
+
+/* Ensure nav-links are visible on larger screens */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
 
 /* Home Page Specific Styles */
 .hero-section {

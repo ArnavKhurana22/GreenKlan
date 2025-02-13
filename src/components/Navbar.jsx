@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/tryLogo2.png';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

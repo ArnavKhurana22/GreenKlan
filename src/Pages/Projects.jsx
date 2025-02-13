@@ -5,12 +5,10 @@ const projects = [
   {
     title: "Urban Reforestation",
     description: "Planting 1 million trees in urban areas by 2025",
-    image: "project1.jpg"
   },
   {
     title: "Ocean Cleanup",
     description: "Removing plastic waste from coastal regions",
-    image: "project2.jpg"
   }
 ];
 
