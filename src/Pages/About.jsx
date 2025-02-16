@@ -1,21 +1,25 @@
 import { motion } from 'framer-motion';
-import abhishekImg from '../assets/abhishek.png';
-import gauravImg from '../assets/gaurav.png';
-import arnavImg from '../assets/arnav.png';
+import {  FaLinkedin } from 'react-icons/fa';
+import abhishekImg from '../assets/abhishekImg.jpg';
+import gauravImg from '../assets/gaurav.jpg';
+import arnavImg from '../assets/arnav.jpg';
 import himajaImg from '../assets/himaja.jpg';
 
 const founders = [
   {
     name: "Abhishek Ray",
     role: "Executive Director",
-    bio: "Environmental scientist with 10+ years in conservation projects. Spearheaded reforestation initiatives across 15 countries.",
+    bio: "Meet Abhishek Ray—an educator, entrepreneur, and advocate for sustainability. With a background in Electrical Engineering and an MBA, he combines business expertise with a commitment to environmental impact. As an IICA-certified Independent Director, he mentors future leaders in sustainable business, green marketing, and ethical leadership, driving lasting change for both businesses and the planet.",
+    social: { linkedin: "#" },
     image: abhishekImg
   },
   {
     name: "Gaurav Bhardwaj",
     role: "Program Manager",
     bio: "Community engagement specialist focused on urban sustainability. Founder of Green Cities Initiative.",
+    social: { linkedin: "#" },
     image: gauravImg
+
   },
   {
     name: "Arnav Khurana",
@@ -26,7 +30,7 @@ const founders = [
   {
     name: "Himaja Mullapudi",
     role: "Outreach Coordinator",
-    bio: "Environmental educator and activist. Organized youth climate strikes reaching 500k+ participants globally.",
+    bio: "Dr. Himaja Mullapudi, a dentist with a passion for sustainability, aims to integrate eco-friendly practices into healthcare. She combines clinical expertise with strategic HR knowledge, advocating for environmental awareness in her field while pursuing a career in sustainability.",
     image: himajaImg
   }
 ];

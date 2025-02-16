@@ -55,11 +55,11 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <div className="stat-item">
-            <h3>15K+</h3>
+            <h3>100+</h3>
             <p>Trees Planted</p>
           </div>
           <div className="stat-item">
-            <h3>200+</h3>
+            <h3>100+</h3>
             <p>Active Volunteers</p>
           </div>
           <div className="stat-item">
